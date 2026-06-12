@@ -99,13 +99,6 @@ body {
 #rotor .beat { font-style: italic;
   font-size: clamp(16px, 1.8vw, 21px); color: #EAE4D6; }
 #rotor .err { font-size: clamp(13px, 1.4vw, 16px); color: var(--bone-mute); }
-#descend { margin-top: 16px; font-size: 10.5px;
-  letter-spacing: .5em; padding-left: .5em;
-  color: rgba(27,185,60,.85);
-  animation: pulse 2.8s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100% { opacity: .25; } 50% { opacity: .95; } }
-
 /* the dock: full-bordered, solid, beneath the dissolved legs */
 #dock {
   position: fixed; left: 0; right: 0; bottom: 5vh;
@@ -148,9 +141,6 @@ body {
     mask-image: linear-gradient(180deg, #000 0%, #000 60%, transparent 70%); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #descend { animation: none; opacity: .7; }
-}
 </style>
 </head>
 <body>
@@ -171,7 +161,6 @@ body {
     <p class="beat" data-slot="3">And the one running inside that.</p>
     <p class="err" data-slot="err">Erratum: for &#8220;world,&#8221; read &#8220;model,&#8221; throughout.</p>
   </div>
-  <p id="descend" aria-hidden="true">DESCEND</p>
 </header>
 
 <nav id="dock">
@@ -194,13 +183,12 @@ body {
   var R = 0.84, S7 = Math.pow(R, 7);
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var svg = document.getElementById('gates');
-  var descend = document.getElementById('descend');
   var slots = {};
   [].forEach.call(document.querySelectorAll('#rotor [data-slot]'), function (el) {
     slots[el.getAttribute('data-slot')] = el;
   });
 
-  var d = 0, td = 0, lastT = performance.now(), descended = false;
+  var d = 0, td = 0, lastT = performance.now();
   var vw, vh, cx, ly, cy, topB, halfB, footB;
 
   var POOL = 12, paths = [];
@@ -261,7 +249,6 @@ body {
     slots['3'].style.opacity = (win(d, k3, 0.55) * (1 - errOp)).toFixed(3);
     slots.err.style.opacity = errOp.toFixed(3);
 
-    if (d > 0.45 && !descended) { descended = true; descend.style.display = 'none'; }
   }
 
   function frame(t) {
