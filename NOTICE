@@ -1,0 +1,28 @@
+THE SIMULATION HOLDS — website
+the-simulation-holds.com
+
+This repository contains the website for the book "The Simulation Holds."
+Three layers of content live here under three separate regimes. This notice
+states which is which.
+
+1. THE SITE CODE
+   The HTML, CSS, JavaScript, the gate-drawing engine, the generated icons,
+   and the og image in this repository are dedicated to the public domain
+   under CC0 1.0 Universal. See the LICENSE file. No rights reserved. Copy
+   it, change it, ship it, sell it, no permission or attribution required.
+
+2. THE EMBEDDED TYPEFACE
+   The site embeds a subset of EB Garamond, designed by Georg Duffner and
+   Octavio Pardo. EB Garamond is licensed under the SIL Open Font License,
+   Version 1.1. That license permits bundling and redistribution, including
+   inside this page, but the font itself is NOT covered by the CC0
+   dedication above and cannot be relicensed under it. If you reuse the
+   font, it remains under the OFL.
+   License: https://openfontlicense.org
+   Source:  https://github.com/georgd/EB-Garamond
+
+3. THE BOOK'S TEXT
+   The text of the book is not stored in this repository; this repo is only
+   the website. The text is separately dedicated to the public domain under
+   CC0 1.0 and is hosted at:
+   https://archive.org/details/the-simulation-holds
