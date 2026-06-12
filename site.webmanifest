@@ -1,0 +1,11 @@
+{
+  "name": "The Simulation Holds",
+  "short_name": "Simulation Holds",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#121210",
+  "background_color": "#121210",
+  "display": "standalone"
+}
