@@ -6,8 +6,10 @@
   One file. No external requests. No trackers. No rights reserved.
   Set in EB Garamond, a copy of a copy, embedded below.
 
-  ONE EDIT REQUIRED BEFORE DEPLOY:
-  search for PASTE-AMAZON-LISTING-URL and replace it with the live listing.
+  ONE EDIT REMAINING BEFORE DEPLOY:
+  the Amazon listing URL is wired in. When the audiobook is live on the
+  Internet Archive, search for PASTE-ARCHIVE-AUDIO-URL and replace it with
+  the audio item's URL. Until then, THE VOICE button points at a placeholder.
 
   Scroll to descend. It does not bottom out.
 -->
@@ -102,12 +104,12 @@ body {
 /* the dock: full-bordered, solid, beneath the dissolved legs */
 #dock {
   position: fixed; left: 0; right: 0; bottom: 5vh;
-  display: flex; justify-content: center; align-items: stretch; gap: 24px;
-  padding: 0 4vw;
+  display: flex; justify-content: center; align-items: stretch; gap: 20px;
+  padding: 0 3vw;
 }
 .gate-btn {
   display: block;
-  width: 252px; max-width: 44vw;
+  width: 232px; max-width: 30vw;
   border: 1.5px solid var(--ph);
   padding: 17px 10px 15px; text-align: center;
   color: var(--ph); text-decoration: none;
@@ -164,12 +166,16 @@ body {
 </header>
 
 <nav id="dock">
-  <a class="gate-btn" id="btn-object" href="PASTE-AMAZON-LISTING-URL">
+  <a class="gate-btn" id="btn-object" href="https://www.amazon.com/dp/B0H57V1TZN">
     <span class="main">THE OBJECT</span>
     <span class="sub">PAPERBACK &#183; AMAZON</span>
   </a>
   <a class="gate-btn" id="btn-text" href="https://archive.org/details/the-simulation-holds">
     <span class="main">THE TEXT</span>
+    <span class="sub">FREE FOREVER &#183; ARCHIVE</span>
+  </a>
+  <a class="gate-btn" id="btn-voice" href="PASTE-ARCHIVE-AUDIO-URL">
+    <span class="main">THE VOICE</span>
     <span class="sub">FREE FOREVER &#183; ARCHIVE</span>
   </a>
 </nav>
