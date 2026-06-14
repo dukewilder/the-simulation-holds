@@ -138,9 +138,10 @@ body {
   #rotor { height: 46px; }
   #dock { flex-direction: column; align-items: center; gap: 12px; bottom: 7vh; }
   .gate-btn { width: min(84vw, 340px); max-width: none; }
-  #horizon { top: 50vh; }
-  #gates { -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 60%, transparent 70%);
-    mask-image: linear-gradient(180deg, #000 0%, #000 60%, transparent 70%); }
+  #horizon { top: 48vh; }
+  #dock { bottom: 5vh; gap: 11px; }
+  #gates { -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 50%, transparent 58%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 50%, transparent 58%); }
 }
 
 </style>
@@ -209,10 +210,10 @@ body {
     vw = innerWidth; vh = innerHeight;
     cx = vw / 2;
     var mobile = vw < 900 || vh / vw > 10 / 9;
-    ly = (mobile ? 0.50 : 0.696) * vh;
-    topB = (mobile ? 0.298 : 0.415) * vh;
-    halfB = Math.min((mobile ? 0.109 : 0.1515) * vh, 0.34 * vw);
-    footB = mobile ? 0.68 * vh : vh;
+    ly = (mobile ? 0.48 : 0.696) * vh;
+    topB = (mobile ? 0.29 : 0.415) * vh;
+    halfB = Math.min((mobile ? 0.088 : 0.1515) * vh, 0.28 * vw);
+    footB = mobile ? 0.566 * vh : vh;
     cy = (ly - footB * S7) / (1 - S7);
     horizon.style.top = ly + 'px';
     svg.setAttribute('viewBox', '0 0 ' + vw + ' ' + vh);
